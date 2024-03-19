@@ -12,7 +12,7 @@ services:
     image: mysql:latest
     restart: always
     environment:
-      MYSQL_ROOT_PASSWORD: your_mysql_root_password
+      MYSQL_ROOT_PASSWORD: 123456
       MYSQL_DATABASE: schoolpp-db
       MYSQL_USER: schoolpp
       MYSQL_PASSWORD: j^I2q43l5
