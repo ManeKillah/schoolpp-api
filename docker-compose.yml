@@ -1,34 +1,18 @@
-version: '3.8'
+version: '3'
 services:
   app:
-    build:
-      context: ./schoolpp
-    ports:
-      - "3000:3000"
-    depends_on:
-      - db
-
-  api:
-    build:
-      context: ./schoolpp_api
+    build: .
     ports:
       - "3030:3030"
-    environment:
-      # Asegúrate de que la URL de conexión aquí coincida con cómo tu API espera conectarse a la base de datos
-      DATABASE_URL: "mysql://root:@db:3306/schoolpp-db"
-      # Otras variables de entorno que tu API pueda necesitar
     depends_on:
       - db
-
-  db:
-    image: mysql:5.7
     environment:
-      MYSQL_ALLOW_EMPTY_PASSWORD: 'yes'
+      NODE_ENV: production
+  db:
+    image: mysql:latest
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: your_mysql_root_password
       MYSQL_DATABASE: schoolpp-db
-    ports:
-      - "3306:3306"
-    volumes:
-      - db-data:/var/lib/mysql
-
-volumes:
-  db-data:
+      MYSQL_USER: schoolpp
+      MYSQL_PASSWORD: j^I2q43l5
