@@ -53,7 +53,7 @@
 
   "mysql": {
     "client": "mysql",
-    "_connection": "mysql://schoolpp:j^I2q43l5@localhost:3306/schoolpp-db",
+    "_connection": "mysql://schoolpp:P@ssw0rd123!@localhost:3306/schoolpp-db",
     "connection": "mysql://root:@localhost:3306/schoolpp-db"
   }
 }
